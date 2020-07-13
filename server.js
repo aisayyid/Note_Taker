@@ -13,3 +13,7 @@ app.use(express.json());
 //Setting route files as a point of reference for our server.
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
+//Listener that starts the server.
+app.listen(PORT, function() {
+    console.log("App listening on PORT: " + PORT);
+  });
