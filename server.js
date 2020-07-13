@@ -1,7 +1,7 @@
 //Setting required global variables.
 const express = require ("express");
 const { v1: uuidv1 } = require('uuid');
-const fs = require("fs");
+
 
 //Using express.
 const app = express();
