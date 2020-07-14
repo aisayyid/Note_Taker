@@ -12,8 +12,6 @@ module.exports = function (app) {
             })
     });
 
-
-
     //Saves new notes to db.json file.
     app.post("/api/notes", function (req, res) {
         //Getting the current notes.
@@ -22,10 +20,8 @@ module.exports = function (app) {
                 //add the new note to the array
                 req.body.id = uuidv1();
                 const newNotes = [...notes, req.body]
-                notesdb.writeNotes(newNotes)
+                res.json(notesdb.writeNotes(newNotes))
                     .then(function (data) {
-                        res.json(data);
-                      
                     })
             })
     })
@@ -38,10 +34,8 @@ module.exports = function (app) {
                     return notes.id !== req.params.id;
 
                 })
-                notesdb.writeNotes(deleteNotes)
+                res.json(notesdb.writeNotes(deleteNotes))
                     .then(function (data) {
-                        res.json(data);
-                       
                     })
             });
     })
