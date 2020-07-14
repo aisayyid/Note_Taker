@@ -1,4 +1,6 @@
 const notesdb = require("../db/Notesdb");
+const { v1: uuidv1 } = require('uuid');
+
 
 module.exports = function (app) {
     //API GET Request.  Handles data coming in from db.json
@@ -18,6 +20,7 @@ module.exports = function (app) {
         notesdb.readNotes()
             .then(function (notes) {
                 //add the new note to the array
+                req.body.id = uuidv1();
                 const newNotes = [...notes, req.body]
                 notesdb.writeNotes(newNotes)
                     .then(function (data) {

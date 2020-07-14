@@ -1,6 +1,6 @@
 const fs = require("fs");
 const util = require("util");
-const { v1: uuidv1 } = require('uuid');
+
 
 // The built-in util package can be used to create Promise-based versions of functions using node style callbacks
 const readFileAsync = util.promisify(fs.readFile);
@@ -19,12 +19,12 @@ class Notes {
     //method to write and stringify notes
     async writeNotes(note) {
         //update to read first and then add new note with id
-     
+        
         await writeFileAsync("db/db.json", JSON.stringify(note))
       
         //reads new notes
         const notes = await this.readNotes()
-        notes.id = uuidv1();
+     
         console.log(notes);
         return;
     }
