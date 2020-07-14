@@ -13,6 +13,7 @@ class Notes {
     //method to read and parse notes
     async readNotes() {
         const notes = await readFileAsync("db/db.json")
+        console.log("Note data" + notes)
         return JSON.parse(notes);
     }
     //method to write and stringify notes
