@@ -26,7 +26,7 @@ class Notes {
         const notes = await this.readNotes()
      
         console.log(notes);
-        return;
+        return 
     }
 }
 

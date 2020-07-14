@@ -25,24 +25,24 @@ module.exports = function (app) {
                 notesdb.writeNotes(newNotes)
                     .then(function (data) {
                         res.json(data);
-
+                      
                     })
             })
     })
+
+
+    app.delete("/api/notes/:id", (req, res) => {
+        notesdb.readNotes()
+            .then(function (notes) {
+                const deleteNotes = notes.filter(function (notes) {
+                    return notes.id !== req.params.id;
+
+                })
+                notesdb.writeNotes(deleteNotes)
+                    .then(function (data) {
+                        res.json(data);
+                       
+                    })
+            });
+    })
 };
-
-//Deletes a note.
-// app.delete("/api/notes/:id", function (req, res) {
-//     notesdb.readNotes()
-//         .then(function (notes) {
-
-//             const noteDeleter = notesdb.filter(function (notes) {
-//                 return notes.id !== req.params.id;
-
-//             })
-//             notesdb.writeNotes(noteDeleter)
-//                 .then(function (data) {
-//                     res.json(data);
-//                 })
-//         })
-// })
