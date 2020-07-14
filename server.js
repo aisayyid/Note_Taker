@@ -1,9 +1,5 @@
 //Setting required global variables.
-const express = require ("express");
-
-
-
-
+const express = require("express");
 //Using express.
 const app = express();
 //Setting initial port.
@@ -16,6 +12,6 @@ app.use(express.static("public"));
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 //Listener that starts the server.
-app.listen(PORT, function() {
-    console.log("App listening on PORT: " + PORT);
-  });
+app.listen(PORT, function () {
+  console.log("App listening on PORT: " + PORT);
+});
