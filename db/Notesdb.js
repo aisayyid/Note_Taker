@@ -12,28 +12,22 @@ class Notes {
     }
     //method to read and parse notes
     async readNotes() {
+    
         const notes = await readFileAsync("db/db.json")
-        console.log("Note data" + notes)
         return JSON.parse(notes);
     }
     //method to write and stringify notes
     async writeNotes(note) {
         //update to read first and then add new note with id
+     
         await writeFileAsync("db/db.json", JSON.stringify(note))
+      
         //reads new notes
         const notes = await this.readNotes()
+        notes.id = uuidv1();
         console.log(notes);
         return;
     }
 }
-
-//   const thisNote = new Notes
-//   const newNote = {
-//     "title": "blah",
-//     "text": "words",
-//     "id": 2
-// }
-
-// thisNote.writeNotes(newNote);
 
 module.exports = new Notes();
