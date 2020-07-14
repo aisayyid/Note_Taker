@@ -29,4 +29,20 @@ module.exports = function (app) {
                     })
             })
     })
-};   
+};
+
+//Deletes a note.
+// app.delete("/api/notes/:id", function (req, res) {
+//     notesdb.readNotes()
+//         .then(function (notes) {
+
+//             const noteDeleter = notesdb.filter(function (notes) {
+//                 return notes.id !== req.params.id;
+
+//             })
+//             notesdb.writeNotes(noteDeleter)
+//                 .then(function (data) {
+//                     res.json(data);
+//                 })
+//         })
+// })
