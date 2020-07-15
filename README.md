@@ -21,7 +21,7 @@
   
   ![](images/express_server.png)
   
-  - Seperate file created to handle the read and write functions using fs.  Requires fs and util up top.  A class of notes is then created to export functionality to the rest of the project as an object.  The readNotes and writeNotes methods both use async await to make them synchronous.  The readNotes method takes the note data which is being sent to the db.json file, and parsing it so it so that it can be transferred between the front and back ends. The writeNotes method then stringifys and writes out those notes for the user. re-reads the new stringified note and returns it.  The class is the exported so that the methods can be called within the apiroute JS file.
+  - Seperate file created to handle the read and write functions using fs.  Requires fs and util up top.  A class of notes is then created to export functionality to the rest of the project as an object.  The readNotes and writeNotes methods both use async await to make them synchronous.  The readNotes method takes the note data which is being sent to the db.json file, and parsing it so it so that it can be transferred between the front and back ends. The writeNotes method then stringifies and writes out those notes for the user. re-reads the new stringified note and returns it.  The class is the exported so that the methods can be called within the apiroute JS file.
   
   ![](images/notesdb.png)
   
