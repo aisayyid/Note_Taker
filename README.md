@@ -33,7 +33,7 @@
   
   ![](images/apirouteget.png)
   
-  - Calls the readNotes method once more to read the note so that it can then give it a unique id using uuid, then write it into the array of notes.
+  - Calls the readNotes method to read the note so that it can then give it a unique id using uuid, then write it into the array of notes.
   
   ![](images/apirroutepost.png)
   
@@ -41,7 +41,7 @@
   
   ![](images/apidelete.png)
   
-  - Routes the pages, directing the users to the notes page when the link contains "/notes", and to the home page when the link only contains "./"
+  - Routes the pages, directing the users to the notes page when the link contains "/notes", and to the home page when the link only contains "/"
   
   ![](images/htmlroutes.png)
   
