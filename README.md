@@ -35,7 +35,7 @@
   
   - Calls the readNotes method once more to read the note so that it can then give it a unique id using uuid, then write it into the array of notes.
   
-  ![](images/apiroutepost.png)
+  ![](images/apirroutepost.png)
   
   - Calls the readNote method once more, so that it can read the file and filter it to single out the id, so that the note can then be deleted by the parameter of id.  It then rewrites the data, which will result in the deletion of the note.
   
