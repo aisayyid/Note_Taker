@@ -49,4 +49,8 @@
   
   ## Questions
   For any questions, [mailto:alexisayyid@gmail.com], or visit my [GitHub] (https://github.com/aisayyid) 
+  
+  ### Deployed:
+  
+  https://vert-bastille-18136.herokuapp.com/
  
