@@ -12,7 +12,7 @@
   ## Installation
   Have node installed, and run an "npm i" to install all requirements. Project requires Express and uuid.  Deployed on Heroku.
   ## Usage
-  User types in a title for the notes, and the content of the notes, then presses save.  This will store that note to the sidebar on the right, where the user can click on it to revisit it, or they can choose to delete it.
+  User types in a title for the notes, and the content of the notes, then presses save.  This will store that note to the sidebar on the left, where the user can click on it to revisit it, or they can choose to delete it.
   ## License
   MIT
   ## Breakdown
