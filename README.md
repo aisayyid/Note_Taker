@@ -52,5 +52,5 @@
   
   ### Deployed:
   
-  https://vert-bastille-18136.herokuapp.com/
+  https://notetaker-ami.herokuapp.com/
  
